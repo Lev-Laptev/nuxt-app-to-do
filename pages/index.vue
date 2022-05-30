@@ -1,52 +1,34 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
+  <div>
+    <app-header />
 
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
+    <div class="box">
+      <app-create-task />
     </div>
-  </section>
+
+    <app-tasks
+      v-for="(task, i) in tasks"
+      :key="i"
+      :task="task"
+    />
+  </div>
 </template>
 
 <script>
-import Card from '~/components/Card'
+import { mapState } from 'vuex'
+import AppTasks from '@/components/AppTasks.vue'
+import AppHeader from '@/components/AppHeader.vue'
+import AppCreateTask from '@/components/AppCreateTask.vue'
 
 export default {
   name: 'IndexPage',
   components: {
-    Card
+    AppTasks,
+    AppHeader,
+    AppCreateTask
+  },
+  computed: {
+    ...mapState(['tasks'])
   }
 }
 </script>
