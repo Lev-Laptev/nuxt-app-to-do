@@ -2,10 +2,10 @@
   <b-navbar>
     <template #brand>
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
-        <img
-          src="~/assets/icons/timing.png"
+        <b-image
+          :src="require('@/assets/icons/timing.png')"
           alt="to-do"
-        >
+        />
       </b-navbar-item>
     </template>
 
