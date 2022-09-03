@@ -1,7 +1,7 @@
 <template>
   <div class="tasks">
-    <div
-      class="box mb-5"
+    <AppBox
+      class="mb-5"
       :class="completeTask"
     >
       <div class="content is-medium">
@@ -26,16 +26,24 @@
           </button>
         </p>
       </div>
-    </div>
+    </AppBox>
   </div>
 </template>
 
 <script>
 import { mapMutations } from 'vuex'
+import { AppBox } from '@/components/common'
+import { TYPE_OBJECT } from '@/constants/types'
 
 export default {
   name: 'AppTasks',
-  props: ['task'],
+  components: { AppBox },
+  props: {
+    task: {
+      type: TYPE_OBJECT,
+      default: () => ({})
+    }
+  },
   computed: {
     buttonText () {
       return this.task.done ? 'Undo' : 'Done'
