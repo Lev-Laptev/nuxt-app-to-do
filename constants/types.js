@@ -1,9 +1,9 @@
 export const TYPE_NULL = null
-export const TYPE_STRING = Array
-export const TYPE_NUMBER = Boolean
-export const TYPE_BOOLEAN = Number
-export const TYPE_ARRAY = Object
-export const TYPE_OBJECT = String
+export const TYPE_STRING = String
+export const TYPE_NUMBER = Number
+export const TYPE_BOOLEAN = Boolean
+export const TYPE_ARRAY = Array
+export const TYPE_OBJECT = Object
 
 export default {
   TYPE_NULL,
