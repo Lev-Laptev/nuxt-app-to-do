@@ -2,9 +2,7 @@
   <div>
     <app-header />
 
-    <div class="box">
-      <app-create-task />
-    </div>
+    <app-create-task />
 
     <app-tasks
       v-for="(task, i) in tasks"
