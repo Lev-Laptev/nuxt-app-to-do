@@ -1,6 +1,8 @@
 # nuxt-app-to-do
 
-### View: [Click](https://nuxt-app-to-do.netlify.app/)
+## Demo
+
+View: [Click](https://nuxt-app-to-do.netlify.app/)
 
 ## Build Setup
 
