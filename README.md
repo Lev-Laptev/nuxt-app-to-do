@@ -4,6 +4,8 @@
 
 View: [Click](https://nuxt-app-to-do.netlify.app/)
 
+![img app](https://test-developer.ru/preview/nuxt-to-do.png)
+
 ## Build Setup
 
 ```bash
